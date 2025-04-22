@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AamKrunz - Premium Mango Chips</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap">
     <style>
         :root {
             --primary-color: #FF9F1C;
@@ -22,7 +24,7 @@
             --transition: all 0.3s ease;
         }
         
-    * {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -397,6 +399,7 @@
             display: flex;
             flex-direction: column;
             position: relative;
+            transform: translateY(0);
         }
         
         .product-card:hover {
@@ -1902,7 +1905,7 @@
     <!-- Header -->
     <header id="header">
         <nav>
-            <div class="logo">
+            <a href="#" class="logo">
                 <img src="/logo.png" alt="AamKrunz Logo" class="logo-img" />
                 Aam<span>Krunz</span>
             </a>
@@ -1923,7 +1926,8 @@
                 <span class="cart-count" id="cartCount">0</span>
             </div>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
                     <line x1="3" y1="12" x2="21" y2="12"></line>
                     <line x1="3" y1="6" x2="21" y2="6"></line>
                     <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -1931,6 +1935,25 @@
             </button>
         </nav>
     </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <ul class="mobile-menu-links">
+            <li><a href="#products" class="mobile-link">Products</a></li>
+            <li><a href="#gallery" class="mobile-link">Gallery</a></li>
+            <li><a href="#features" class="mobile-link">Features</a></li>
+            <li><a href="#testimonials" class="mobile-link">Testimonials</a></li>
+            <li><a href="#about" class="mobile-link">About</a></li>
+            <li><a href="#contact" class="mobile-link">Contact</a></li>
+        </ul>
+    </div>
 
     <!-- Hero section -->
     <section class="hero">
@@ -1949,128 +1972,7 @@
         <h2 class="section-title">Our Flavor Collection</h2>
         <p class="section-subtitle">Explore our range of delicious mango chips, crafted with care and packed with flavor.</p>
         <div class="product-grid" id="productGrid">
-            <!-- Product 1 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1582284540020-8acbe03f4924?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                        alt="Classic Mango Chips">
-                    <div class="product-badge">Bestseller</div>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">Classic Mango Chips</h3>
-                    <p class="product-desc">Our original recipe with a perfect balance of sweet and tangy flavors. A timeless
-                        favorite for mango lovers.</p>
-                    <div class="product-price">₹199 <span class="original-price">₹249</span></div>
-                    <div class="product-actions">
-                        <div class="quantity-selector">
-                            <button class="quantity-btn">-</button>
-                            <input type="text" class="quantity-input" value="1" readonly>
-                            <button class="quantity-btn">+</button>
-                        </div>
-                        <button class="add-to-cart">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="9" cy="21" r="1"></circle>
-                                <circle cx="20" cy="21" r="1"></circle>
-                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                            </svg>
-                            Add to Cart
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Product 2 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1599003037886-f8b50bc290c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                        alt="Spicy Mango Chips">
-                    <div class="product-badge">New</div>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">Spicy Mango Chips</h3>
-                    <p class="product-desc">A fiery twist on our classic recipe, featuring a blend of Indian spices that pack a
-                        punch with every bite.</p>
-                    <div class="product-price">₹219</div>
-                    <div class="product-actions">
-                        <div class="quantity-selector">
-                            <button class="quantity-btn">-</button>
-                            <input type="text" class="quantity-input" value="1" readonly>
-                            <button class="quantity-btn">+</button>
-                        </div>
-                        <button class="add-to-cart">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="9" cy="21" r="1"></circle>
-                                <circle cx="20" cy="21" r="1"></circle>
-                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                            </svg>
-                            Add to Cart
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Product 3 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1613919113640-25732ec5e61f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                        alt="Tangy Masala Mango Chips">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">Tangy Masala Mango Chips</h3>
-                    <p class="product-desc">The perfect blend of tanginess and masala spices, creating a mouth-watering flavor
-                        explosion.</p>
-                    <div class="product-price">₹229 <span class="original-price">₹259</span></div>
-                    <div class="product-actions">
-                        <div class="quantity-selector">
-                            <button class="quantity-btn">-</button>
-                            <input type="text" class="quantity-input" value="1" readonly>
-                            <button class="quantity-btn">+</button>
-                        </div>
-                        <button class="add-to-cart">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="9" cy="21" r="1"></circle>
-                                <circle cx="20" cy="21" r="1"></circle>
-                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                            </svg>
-                            Add to Cart
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Product 4 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1566478989037-eec170784d0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                        alt="Sweet & Salty Mango Chips">
-                    <div class="product-badge">Popular</div>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">Sweet & Salty Mango Chips</h3>
-                    <p class="product-desc">A delightful combination of sweetness and sea salt that creates a perfectly balanced
-                        snacking experience.</p>
-                    <div class="product-price">₹209</div>
-                    <div class="product-actions">
-                        <div class="quantity-selector">
-                            <button class="quantity-btn">-</button>
-                            <input type="text" class="quantity-input" value="1" readonly>
-                            <button class="quantity-btn">+</button>
-                        </div>
-                        <button class="add-to-cart">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="9" cy="21" r="1"></circle>
-                                <circle cx="20" cy="21" r="1"></circle>
-                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                            </svg>
-                            Add to Cart
-                        </button>
-                    </div>
-                </div>
-            </div>
+            <!-- Product cards will be dynamically generated here -->
             </div>
             </section>
             
@@ -2078,69 +1980,68 @@
             <section class="product-gallery" id="gallery">
                 <div class="container">
                     <h2 class="section-title">Product Gallery</h2>
-                    <p class="section-subtitle">Take a closer look at our delicious mango chips and the care we put into making them
-                    </p>
-                    <div class="gallery-grid">
-                        <div class="gallery-item">
-                            <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                                alt="Mango Harvest">
-                            <div class="gallery-overlay">
-                                <div class="gallery-caption">
-                                    <h4 class="gallery-title">Premium Mango Selection</h4>
-                                    <p class="gallery-desc">We handpick the finest mangoes for our chips</p>
-                                </div>
-                            </div>
+            <p class="section-subtitle">Take a closer look at our delicious mango chips and the care we put into making them</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                        alt="Mango Harvest">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <h4 class="gallery-title">Premium Mango Selection</h4>
+                            <p class="gallery-desc">We handpick the finest mangoes for our chips</p>
                         </div>
-                        <div class="gallery-item">
-                            <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                                alt="Spice Blending">
-                            <div class="gallery-overlay">
-                                <div class="gallery-caption">
-                                    <h4 class="gallery-title">Authentic Spice Blends</h4>
-                                    <p class="gallery-desc">Our secret spice mixes create unique flavors</p>
-                                </div>
-                            </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                        alt="Spice Blending">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <h4 class="gallery-title">Authentic Spice Blends</h4>
+                            <p class="gallery-desc">Our secret spice mixes create unique flavors</p>
                         </div>
-                        <div class="gallery-item">
-                            <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                                alt="Chip Making Process">
-                            <div class="gallery-overlay">
-                                <div class="gallery-caption">
-                                    <h4 class="gallery-title">Traditional Process</h4>
-                                    <p class="gallery-desc">Carefully crafted using time-honored techniques</p>
-                                </div>
-                            </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                        alt="Chip Making Process">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <h4 class="gallery-title">Traditional Process</h4>
+                            <p class="gallery-desc">Carefully crafted using time-honored techniques</p>
                         </div>
-                        <div class="gallery-item">
-                            <img src="https://images.unsplash.com/photo-1514517604298-cf80e0fb7f1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                                alt="Packaging">
-                            <div class="gallery-overlay">
-                                <div class="gallery-caption">
-                                    <h4 class="gallery-title">Eco-Friendly Packaging</h4>
-                                    <p class="gallery-desc">Sustainable materials for a better planet</p>
-                                </div>
-                            </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1514517604298-cf80e0fb7f1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                        alt="Packaging">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <h4 class="gallery-title">Eco-Friendly Packaging</h4>
+                            <p class="gallery-desc">Sustainable materials for a better planet</p>
                         </div>
-                        <div class="gallery-item">
-                            <img src="https://images.unsplash.com/photo-1583258292688-d0213dc5a3a8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                                alt="Mango Orchard">
-                            <div class="gallery-overlay">
-                                <div class="gallery-caption">
-                                    <h4 class="gallery-title">Our Mango Orchards</h4>
-                                    <p class="gallery-desc">Where our journey begins</p>
-                                </div>
-                            </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1583258292688-d0213dc5a3a8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                        alt="Mango Orchard">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <h4 class="gallery-title">Our Mango Orchards</h4>
+                            <p class="gallery-desc">Where our journey begins</p>
                         </div>
-                        <div class="gallery-item">
-                            <img src="https://images.unsplash.com/photo-1576107232684-1279f390859f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                                alt="Final Product">
-                            <div class="gallery-overlay">
-                                <div class="gallery-caption">
-                                    <h4 class="gallery-title">Ready to Enjoy</h4>
-                                    <p class="gallery-desc">The perfect snack for any occasion</p>
-                                </div>
-                            </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1576107232684-1279f390859f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                        alt="Final Product">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <h4 class="gallery-title">Ready to Enjoy</h4>
+                            <p class="gallery-desc">The perfect snack for any occasion</p>
                         </div>
+                    </div>
+                </div>
                     </div>
         </div>
     </section>
@@ -2154,16 +2055,17 @@
                 <div class="feature-card">
                     <div class="feature-icon">🌱</div>
                     <h3 class="feature-title">100% Natural</h3>
-                    <p>Made from premium mangoes with no artificial flavors, colors, or preservatives. Just pure mango goodness in every bite.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔥</div>
-                    <h3 class="feature-title">Authentic Flavors</h3>
-                    <p>Carefully crafted recipes that bring out the true essence of Indian spices, creating a unique taste experience.</p>
+                    <p>Made from premium mangoes with no artificial flavors, colors, or preservatives. Just pure mango goodness in every
+                        bite.</p>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon">💪</div>
-                        <h3 class="feature-title">Nutrient-Rich</h3>
+                        <div class="feature-icon">🔥</div>
+                        <h3 class="feature-title">Authentic Flavors</h3>
+                    <p>Carefully crafted recipes that bring out the true essence of Indian spices, creating a unique taste experience.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💪</div>
+                    <h3 class="feature-title">Nutrient-Rich</h3>
                     <p>Packed with vitamins and minerals to give you a healthy, energizing snack option that's good for your body and mind.
                     </p>
                     </div>
@@ -2183,46 +2085,46 @@
                         <p class="section-subtitle">Don't just take our word for it - hear from our satisfied customers</p>
                         <div class="testimonial-grid">
                             <div class="testimonial-card">
-                                <p class="testimonial-text">These mango chips are absolutely addictive! The perfect balance of sweet and
-                                    spicy flavors. I've tried all varieties and can't decide which one I love the most.</p>
-                                <div class="testimonial-author">
-                                    <div class="testimonial-avatar">
-                                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Priya Sharma">
-                                    </div>
-                                    <div class="testimonial-info">
-                                        <h4>Priya Sharma</h4>
-                                        <p>Mumbai, India</p>
-                                        <div class="testimonial-rating">★★★★★</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="testimonial-card">
-                                <p class="testimonial-text">I was skeptical at first, but these are nothing like regular chips. The
-                                    authentic flavors and crunch are amazing, and I love that they're made with natural ingredients.</p>
-                                <div class="testimonial-author">
-                                    <div class="testimonial-avatar">
-                                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rahul Patel">
-                                    </div>
-                                    <div class="testimonial-info">
-                                        <h4>Rahul Patel</h4>
-                                        <p>Delhi, India</p>
-                                        <div class="testimonial-rating">★★★★★</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="testimonial-card">
-                                <p class="testimonial-text">As someone who's always looking for healthier snack options, AamKrunz mango
-                                    chips have been a game-changer. Delicious, satisfying, and guilt-free!</p>
-                                <div class="testimonial-author">
-                                    <div class="testimonial-avatar">
-                                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Anita Desai">
-                                    </div>
-                                    <div class="testimonial-info">
-                                        <h4>Anita Desai</h4>
-                                        <p>Bangalore, India</p>
-                                        <div class="testimonial-rating">★★★★☆</div>
-                                    </div>
-                                </div>
+                <p class="testimonial-text">These mango chips are absolutely addictive! The perfect balance of sweet and spicy flavors.
+                    I've tried all varieties and can't decide which one I love the most.</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Priya Sharma">
+                    </div>
+                    <div class="testimonial-info">
+                        <h4>Priya Sharma</h4>
+                        <p>Mumbai, India</p>
+                        <div class="testimonial-rating">★★★★★</div>
+                    </div>
+                </div>
+                </div>
+                <div class="testimonial-card">
+                <p class="testimonial-text">I was skeptical at first, but these are nothing like regular chips. The authentic flavors
+                    and crunch are amazing, and I love that they're made with natural ingredients.</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rahul Patel">
+                    </div>
+                    <div class="testimonial-info">
+                        <h4>Rahul Patel</h4>
+                        <p>Delhi, India</p>
+                        <div class="testimonial-rating">★★★★★</div>
+                    </div>
+                </div>
+                </div>
+                <div class="testimonial-card">
+                <p class="testimonial-text">As someone who's always looking for healthier snack options, AamKrunz mango chips have been
+                    a game-changer. Delicious, satisfying, and guilt-free!</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Anita Desai">
+                    </div>
+                    <div class="testimonial-info">
+                        <h4>Anita Desai</h4>
+                        <p>Bangalore, India</p>
+                        <div class="testimonial-rating">★★★★☆</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -2232,17 +2134,17 @@
         <div class="about-content">
             <div class="about-text">
                 <h2>Our Story</h2>
-                <p>Born out of a passion for authentic Indian flavors and the love for mangoes, AamKrunz brings you a
-                    healthy alternative to regular fried chips. Our journey began in a small kitchen in the heart of India,
-                    where we discovered the perfect way to transform mangoes into crispy, flavorful chips.</p>
-                <p>Today, we continue to handcraft our chips using traditional methods, carefully selecting each mango and
-                    infusing them with spice blends that celebrate India's rich culinary heritage. Every bite of our mango
-                    chips is a testament to our commitment to quality, taste, and health.</p>
+                <p>Born out of a passion for authentic Indian flavors and the love for mangoes, AamKrunz brings you a healthy
+                    alternative to regular fried chips. Our journey began in a small kitchen in the heart of India, where we discovered
+                    the perfect way to transform mangoes into crispy, flavorful chips.</p>
+                <p>Today, we continue to handcraft our chips using traditional methods, carefully selecting each mango and infusing them
+                    with spice blends that celebrate India's rich culinary heritage. Every bite of our mango chips is a testament to our
+                    commitment to quality, taste, and health.</p>
                 <div class="about-features">
                     <div class="about-feature">
                         <div class="about-feature-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                                 <polyline points="22 4 12 14.01 9 11.01"></polyline>
                             </svg>
@@ -2254,8 +2156,8 @@
                     </div>
                     <div class="about-feature">
                         <div class="about-feature-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
                                 <path
                                     d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
                                 </path>
@@ -2268,8 +2170,8 @@
                     </div>
                     <div class="about-feature">
                         <div class="about-feature-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                             </svg>
                         </div>
@@ -2280,8 +2182,8 @@
                     </div>
                     <div class="about-feature">
                         <div class="about-feature-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
                                 <circle cx="12" cy="12" r="10"></circle>
                                 <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
                                 <line x1="9" y1="9" x2="9.01" y2="9"></line>
@@ -2296,7 +2198,8 @@
                 </div>
             </div>
             <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1591189863430-ab87e120f312?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Our Story">
+                <img src="https://images.unsplash.com/photo-1591189863430-ab87e120f312?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                    alt="Our Story">
             </div>
         </div>
     </section>
@@ -2318,13 +2221,13 @@
         <div class="contact-content">
             <div class="contact-info">
                 <h2>Get In Touch</h2>
-                <p>Have questions or feedback? We'd love to hear from you! Reach out to us and we'll get back to you as soon
-                    as possible.</p>
+                <p>Have questions or feedback? We'd love to hear from you! Reach out to us and we'll get back to you as soon as
+                    possible.</p>
                 <div class="contact-details">
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                 <circle cx="12" cy="10" r="3"></circle>
                             </svg>
@@ -2336,10 +2239,9 @@
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                                </path>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                                 <polyline points="22,6 12,13 2,6"></polyline>
                             </svg>
                         </div>
@@ -2350,8 +2252,8 @@
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
                                 <path
                                     d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
                                 </path>
@@ -2364,8 +2266,8 @@
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                                 <line x1="8" y1="21" x2="16" y2="21"></line>
                                 <line x1="12" y1="17" x2="12" y2="21"></line>
@@ -2407,27 +2309,34 @@
         <div class="footer-content">
             <div class="footer-about">
                 <div class="footer-logo">Aam<span>Krunz</span></div>
-                <p>Premium quality mango chips with authentic Indian flavors for the perfect snacking experience. Healthy, delicious, and made with love.</p>
+                <p>Premium quality mango chips with authentic Indian flavors for the perfect snacking experience. Healthy, delicious,
+                    and made with love.</p>
                 <div class="social-links">
                     <a href="#">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
                             <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                         </svg>
                     </a>
                     <a href="#">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
                             <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                             <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                             <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                         </svg>
                     </a>
                     <a href="#">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                            </path>
                         </svg>
                     </a>
                     <a href="#">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
                             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                             <rect x="2" y="9" width="4" height="12"></rect>
                             <circle cx="4" cy="4" r="2"></circle>
@@ -2475,8 +2384,22 @@
     <div class="modal" id="cartModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title">Your Cart</h2>
-                <button class="close-modal" id="closeModal">&times;</button>
+                <h2 class="modal-title">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    Your Cart
+                </h2>
+                <button class="close-modal" id="closeModal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
             </div>
             <div class="modal-body" id="cartItems">
                 <div class="empty-cart-message" id="emptyCartMessage">
@@ -2489,7 +2412,8 @@
             </div>
             <div class="modal-footer">
                 <button class="continue-shopping" id="continueShoppingBtn">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
                         <line x1="19" y1="12" x2="5" y2="12"></line>
                         <polyline points="12 19 5 12 12 5"></polyline>
                     </svg>
@@ -2498,53 +2422,98 @@
                 <div class="cart-summary" id="cartSummary" style="display: none;">
                     <span class="cart-total-label">Total:</span>
                     <span class="cart-total-price" id="cartTotal">₹0.00</span>
-                    </div>
-                    <button class="checkout-btn" id="checkoutBtn" style="display: none;">
-                        Proceed to Checkout
+                </div>
+                <button class="checkout-btn" id="checkoutBtn" style="display: none;">
+                    <span>Proceed to Checkout</span>
                     </button>
                     </div>
                     </div>
                     </div>
-                    
-                    <!-- JavaScript -->
-                    <script>
-                        // Sample product data
-                        const products = [
-                            {
-                                id: 1,
-                                name: "Classic Mango Chips",
-                                price: 199,
-                                originalPrice: 249,
-                                image: "https://images.unsplash.com/photo-1582284540020-8acbe03f4924?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-                                badge: "Bestseller"
-                            },
-                            {
-                                id: 2,
-                                name: "Spicy Mango Chips",
-                                price: 219,
-                                image: "https://images.unsplash.com/photo-1599003037886-f8b50bc290c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-                                badge: "New"
-                            },
-                            {
-                                id: 3,
-                                name: "Tangy Masala Mango Chips",
-                                price: 229,
-                                originalPrice: 259,
-                                image: "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                            },
-                            {
-                                id: 4,
-                                name: "Sweet & Salty Mango Chips",
-                                price: 209,
-                                image: "https://images.unsplash.com/photo-1566478989037-eec170784d0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-                                badge: "Popular"
-                            }
-                        ];
 
-                        // Cart functionality
-                        let cart = [];
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer">
+        <!-- Toast notifications will be inserted here -->
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Sample product data
+        const products = [
+            {
+                id: 1,
+                name: "Achari Punch (Pickle-inspired tang with hing/kalonji) ",
+                price: 199,
+                originalPrice: 249,
+                image: "https://images.unsplash.com/photo-1582284540020-8acbe03f4924?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+                description: "Our original recipe with a perfect balance of sweet and tangy flavors. A timeless favorite for mango lovers.",
+                badge: "Bestseller"
+            },
+            {
+                id: 2,
+                name: "Mirchi Masti (Andhra-style fiery chili) ",
+                price: 219,
+                image: "https://images.unsplash.com/photo-1599003037886-f8b50bc290c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+                description: "A fiery twist on our classic recipe, featuring a blend of Indian spices that pack a punch with every bite.",
+                badge: "New"
+            },
+            {
+                id: 3,
+                name: "Chaataka (Chaat masala + black salt) ",
+                price: 229,
+                originalPrice: 259,
+                image: "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+                description: "The perfect blend of tanginess and masala spices, creating a mouth-watering flavor explosion."
+            },
+            {
+                id: 4,
+                name: " Himalayan Sour (Rock salt + lemon zest)",
+                price: 209,
+                image: "https://images.unsplash.com/photo-1566478989037-eec170784d0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+                description: "A delightful combination of sweetness and sea salt that creates a perfectly balanced snacking experience.",
+                badge: "Popular"
+            },
+            {
+                id: 5,
+                name: "Kokum-Kairi (Maharashtra-style kokum + raw mango fusion)",
+                price: 209,
+                image: "https://images.unsplash.com/photo-1566478989037-eec170784d0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+                description: "A delightful combination of sweetness and sea salt that creates a perfectly balanced snacking experience.",
+                badge: "Popular"
+            },
+            {
+                id: 6,
+                name: "Protein Punch (For fitness buffs: added quinoa/amaranth crunch)",
+                price: 209,
+                image: "https://images.unsplash.com/photo-1566478989037-eec170784d0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+                description: "A delightful combination of sweetness and sea salt that creates a perfectly balanced snacking experience.",
+                badge: "Popular"
+            },
+            {
+                id: 7,
+                name: "Gur-Kaccha (Jaggery-coated sweet & sour) ",
+                price: 209,
+                image: "https://images.unsplash.com/photo-1566478989037-eec170784d0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+                description: "A delightful combination of sweetness and sea salt that creates a perfectly balanced snacking experience.",
+                badge: "Popular"
+            },
+            {
+                id: 8,
+                name: "Sindhi Style (Dry mango powder + cumin kick)",
+                price: 209,
+                image: "https://images.unsplash.com/photo-1566478989037-eec170784d0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+                description: "A delightful combination of sweetness and sea salt that creates a perfectly balanced snacking experience.",
+                badge: "Popular"
+            }
+        ];
+                     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
                         document.addEventListener('DOMContentLoaded', function () {
+                            // Generate product cards
+                            generateProductCards();
+
+                            // Update cart count on page load
+                            updateCartCount();
+                            
                             // Header scroll effect
                             const header = document.getElementById('header');
                             window.addEventListener('scroll', function () {
@@ -2555,6 +2524,29 @@
                                 }
                             });
 
+                            // Mobile menu
+                            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+                            const mobileMenu = document.getElementById('mobileMenu');
+                            const mobileMenuClose = document.getElementById('mobileMenuClose');
+                            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+                            mobileMenuBtn.addEventListener('click', function () {
+                                mobileMenu.classList.add('show');
+                                document.body.style.overflow = 'hidden';
+                            });
+
+                            mobileMenuClose.addEventListener('click', function () {
+                                mobileMenu.classList.remove('show');
+                                document.body.style.overflow = '';
+                            });
+
+                            mobileLinks.forEach(link => {
+                                link.addEventListener('click', function () {
+                                    mobileMenu.classList.remove('show');
+                                    document.body.style.overflow = '';
+                                });
+                            });
+                            
                             // Cart modal
                             const cartIcon = document.getElementById('cartIcon');
                             const cartModal = document.getElementById('cartModal');
@@ -2565,6 +2557,7 @@
                             cartIcon.addEventListener('click', function () {
                                 cartModal.classList.add('show');
                                 document.body.style.overflow = 'hidden';
+                                updateCartUI();
                             });
 
                             function closeCartModal() {
@@ -2574,6 +2567,7 @@
 
                             closeModal.addEventListener('click', closeCartModal);
                             continueShoppingBtn.addEventListener('click', closeCartModal);
+                            continueShoppingBtn.addEventListener('click', closeCartModal);
                             startShoppingBtn.addEventListener('click', closeCartModal);
 
                             // Close modal when clicking outside
@@ -2581,58 +2575,6 @@
                                 if (e.target === cartModal) {
                                     closeCartModal();
                                 }
-                            });
-
-                            // Add to cart functionality
-                            const addToCartButtons = document.querySelectorAll('.add-to-cart');
-                            addToCartButtons.forEach((button, index) => {
-                                button.addEventListener('click', function () {
-                                    const product = products[index];
-                                    const quantityInput = button.parentElement.querySelector('.quantity-input');
-                                    const quantity = parseInt(quantityInput.value);
-
-                                    addToCart(product, quantity);
-                                    updateCartUI();
-
-                                    // Show confirmation
-                                    const confirmation = document.createElement('div');
-                                    confirmation.textContent = `${product.name} added to cart!`;
-                                    confirmation.style.position = 'fixed';
-                                    confirmation.style.bottom = '20px';
-                                    confirmation.style.right = '20px';
-                                    confirmation.style.backgroundColor = 'var(--secondary-color)';
-                                    confirmation.style.color = 'white';
-                                    confirmation.style.padding = '10px 20px';
-                                    confirmation.style.borderRadius = '5px';
-                                    confirmation.style.boxShadow = '0 3px 10px rgba(0, 0, 0, 0.2)';
-                                    confirmation.style.zIndex = '1000';
-                                    document.body.appendChild(confirmation);
-
-                                    setTimeout(() => {
-                                        confirmation.style.opacity = '0';
-                                        confirmation.style.transition = 'opacity 0.5s';
-                                        setTimeout(() => {
-                                            document.body.removeChild(confirmation);
-                                        }, 500);
-                                    }, 2000);
-                                });
-                            });
-
-                            // Quantity selectors
-                            const quantityBtns = document.querySelectorAll('.quantity-btn');
-                            quantityBtns.forEach(btn => {
-                                btn.addEventListener('click', function () {
-                                    const input = this.parentElement.querySelector('.quantity-input');
-                                    let value = parseInt(input.value);
-
-                                    if (this.textContent === '+') {
-                                        value++;
-                                    } else if (this.textContent === '-' && value > 1) {
-                                        value--;
-                                    }
-
-                                    input.value = value;
-                                });
                             });
 
                             // Smooth scrolling for anchor links
@@ -2648,13 +2590,114 @@
                                     }
                                 });
                             });
+
+                            // Newsletter form submission
+                            const newsletterForm = document.querySelector('.newsletter-form');
+                            if (newsletterForm) {
+                                newsletterForm.addEventListener('submit', function (e) {
+                                    e.preventDefault();
+                                    const emailInput = this.querySelector('.newsletter-input');
+                                    if (emailInput.value) {
+                                        showToast('Success', 'You have successfully subscribed to our newsletter!', 'success');
+                                        emailInput.value = '';
+                                    }
+                                });
+                            }
+
+                            // Contact form submission
+                            const contactForm = document.querySelector('.contact-form form');
+                            if (contactForm) {
+                                contactForm.addEventListener('submit', function (e) {
+                                    e.preventDefault();
+                                    showToast('Thank you!', 'Your message has been sent. We\'ll get back to you soon.', 'success');
+                                    this.reset();
+                                });
+                            }
+                            
+                            // Initialize cart UI
+                            updateCartUI();
                         });
 
-                        function addToCart(product, quantity) {
-                            const existingItem = cart.find(item => item.id === product.id);
+                                                                                // Generate product cards
+                                                                                function generateProductCards() {
+                                                                                    const productGrid = document.getElementById('productGrid');
+                                                                                    let productsHTML = '';
+                                                                            
+                                                                                products.forEach(product => {
+                                                                                    productsHTML += `
+                <div class="product-card" data-id="${product.id}">
+                    <div class="product-image">
+                        <img src="${product.image}" alt="${product.name}">
+                        ${product.badge ? `<div class="product-badge">${product.badge}</div>` : ''}
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">${product.name}</h3>
+                        <p class="product-desc">${product.description}</p>
+                        <div class="product-price">₹${product.price} ${product.originalPrice ? `<span class="original-price">₹${product.originalPrice}</span>` : ''}</div>
+                        <div class="product-actions">
+                            <div class="quantity-selector">
+                                <button class="quantity-btn decrease-quantity">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn increase-quantity">+</button>
+                            </div>
+                            <button class="add-to-cart">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg>
+                                <span>Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                `;
+                            });
 
-                            if (existingItem) {
-                                existingItem.quantity += quantity;
+                                                                                productGrid.innerHTML = productsHTML;
+
+                                                                                // Add event listeners to product cards
+                            const quantityBtns = document.querySelectorAll('.quantity-btn');
+                            quantityBtns.forEach(btn => {
+                                btn.addEventListener('click', function () {
+                                    const input = this.parentElement.querySelector('.quantity-input');
+                                    let value = parseInt(input.value);
+
+                                    if (this.classList.contains('increase-quantity')) {
+                                        value++;
+                                    } else if (this.classList.contains('decrease-quantity') && value > 1) {
+                                        value--;
+                                    }
+
+                                    input.value = value;
+                                });
+                            });
+
+                                                                                const addToCartButtons = document.querySelectorAll('.add-to-cart');
+                                                                                addToCartButtons.forEach(button => {
+                                                                                    button.addEventListener('click', function () {
+                                                                                        const productCard = this.closest('.product-card');
+                                                                                        const productId = parseInt(productCard.getAttribute('data-id'));
+                                                                                        const product = products.find(p => p.id === productId);
+                                                                                        const quantityInput = productCard.querySelector('.quantity-input');
+                                                                                        const quantity = parseInt(quantityInput.value);
+
+                                                                                        addToCart(product, quantity);
+
+                                                                                        // Show toast notification
+                                                                                        showToast('Added to Cart', `${product.name} has been added to your cart.`, 'success');
+
+                                                                                        // Reset quantity to 1
+                                                                                        quantityInput.value = 1;
+                                });
+                            });
+                                                                            }
+
+                        function addToCart(product, quantity) {
+                            const existingItemIndex = cart.findIndex(item => item.id === product.id);
+                            
+                            if (existingItemIndex > -1) {
+                                cart[existingItemIndex].quantity += quantity;
                             } else {
                                 cart.push({
                                     ...product,
@@ -2662,18 +2705,54 @@
                                 });
                             }
 
+                            // Save cart to localStorage
+                            localStorage.setItem('cart', JSON.stringify(cart));
+
+                            // Update cart count
                             updateCartCount();
+
+                            // Animate cart icon
+                            const cartCount = document.getElementById('cartCount');
+                            cartCount.classList.add('pulse');
+                            setTimeout(() => {
+                                cartCount.classList.remove('pulse');
+                            }, 500);
                         }
 
                         function removeFromCart(productId) {
+                            const cartItem = document.querySelector(`.cart-item[data-id="${productId}"]`);
+                            if (cartItem) {
+                                cartItem.classList.add('removing');
+
+                                setTimeout(() => {
                             cart = cart.filter(item => item.id !== productId);
+
+                                    // Save cart to localStorage
+                                    localStorage.setItem('cart', JSON.stringify(cart));
+
+                                    // Update cart UI
                             updateCartUI();
+
+                                    // Update cart count
+                                    updateCartCount();
+
+                                    // Show toast notification
+                                    showToast('Removed from Cart', 'Item has been removed from your cart.', 'info');
+                                }, 300);
+                            }
                         }
 
                         function updateCartCount() {
                             const cartCount = document.getElementById('cartCount');
                             const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
                             cartCount.textContent = totalItems;
+
+                            // Show/hide cart count
+                            if (totalItems > 0) {
+                                cartCount.style.display = 'flex';
+                            } else {
+                                cartCount.style.display = 'none';
+                            }
                         }
 
                         function updateCartUI() {
@@ -2704,19 +2783,28 @@
                                 totalPrice += itemTotal;
 
                                 cartHTML += `
-                                                                                                                    <div class="cart-item" data-id="${item.id}">
-                                                                                                                        <div class="cart-item-image">
-                                                                                                                            <img src="${item.image}" alt="${item.name}">
-                                                                                                                        </div>
-                                                                                                                        <div class="cart-item-details">
-                                                                                                                            <h3 class="cart-item-title">${item.name}</h3>
-                                                                                                                            <div class="cart-item-price">₹${item.price.toFixed(2)}</div>
-                                                                                                                            <div class="cart-item-controls">
-                                                                                                                                <div class="cart-quantity">
-                                                                                                                                    <button class="cart-quantity-btn cart-decrease">-</button>
-                                                                                                                                    <input type="text" class="cart-quantity-input" value="${item.quantity}" readonly>
-                                                                                                                                    <button class="cart-quantity-btn cart-increase">+</button>
-                                                                                                                                </div>
+                <div class="cart-item" data-id="${item.id}">
+                    <div class="cart-item-image">
+                        <img src="${item.image}" alt="${item.name}">
+                    </div>
+                    <div class="cart-item-details">
+                        <h3 class="cart-item-title">${item.name}</h3>
+                        <div class="cart-item-price">₹${item.price.toFixed(2)}</div>
+                        <div class="cart-item-controls">
+                            <div class="cart-quantity">
+                                <button class="cart-quantity-btn cart-decrease">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    </svg>
+                                </button>
+                                <input type="text" class="cart-quantity-input" value="${item.quantity}" readonly>
+                                <button class="cart-quantity-btn cart-increase">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    </svg>
+                                </button>
+                            </div>
                             <button class="remove-item" data-id="${item.id}">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <polyline points="3 6 5 6 21 6"></polyline>
@@ -2751,8 +2839,14 @@
 
                                     if (item.quantity > 1) {
                                         item.quantity--;
+
+                                        // Save cart to localStorage
+                                        localStorage.setItem('cart', JSON.stringify(cart));
+
                                         updateCartUI();
                                         updateCartCount();
+                                    } else {
+                                        removeFromCart(productId);
                                     }
                                 });
                             });
@@ -2765,14 +2859,81 @@
                                     const item = cart.find(item => item.id === productId);
 
                                     item.quantity++;
+
+                                    // Save cart to localStorage
+                                    localStorage.setItem('cart', JSON.stringify(cart));
+
                                     updateCartUI();
                                     updateCartCount();
                                 });
                             });
-                        }
 
-                            // Initialize cart count
-                            updateCartCount();
-                        </script>
+        // Add event listener to checkout button
+        checkoutBtn = document.getElementById('checkoutBtn');
+        checkoutBtn.addEventListener('click', function () {
+            showToast('Checkout', 'Proceeding to checkout...', 'success');
+            setTimeout(() => {
+                alert('Thank you for your order! This is a demo checkout process.');
+                cart = [];
+                localStorage.removeItem('cart');
+                updateCartUI();
+                updateCartCount();
+                closeCartModal();
+            }, 1000);
+        });
+    }
+
+    // Toast notification function
+    function showToast(title, message, type = 'info') {
+        const toastContainer = document.getElementById('toastContainer');
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+
+        let iconSvg = '';
+        if (type === 'success') {
+            iconSvg = `
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                `;
+        } else {
+            iconSvg = `
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+                `;
+        }
+
+                                                                                                                                                    toast.innerHTML = `
+            <div class="toast-icon">${iconSvg}</div>
+            <div class="toast-content">
+                <div class="toast-title">${title}</div>
+                <div class="toast-message">${message}</div>
+            </div>
+            <button class="toast-close">×</button>
+            `;
+
+                                                                                                                                                    toastContainer.appendChild(toast);
+
+                                                                                                                                                    // Add event listener to close button
+                                                                                                                                                    const closeBtn = toast.querySelector('.toast-close');
+                                                                                                                                                    closeBtn.addEventListener('click', function () {
+                                                                                                                                                        toast.style.opacity = '0';
+                                                                                                                                                        setTimeout(() => {
+                                                                                                                                                            toastContainer.removeChild(toast);
+                                                                                                                                                        }, 300);
+                                                                                                                                                    });
+
+                                                                                                                                                    // Auto remove toast after 3 seconds
+                                                                                                                                                    setTimeout(() => {
+                                                                                                                                                        if (toastContainer.contains(toast)) {
+                                                                                                                                                            toastContainer.removeChild(toast);
+                                                                                                                                                        }
+                                                                                                                                                    }, 3000);
+                                                                                                                                                }
+                                                                                                                                            </script>
 </body>
 </html>
