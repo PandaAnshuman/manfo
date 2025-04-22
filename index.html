@@ -2439,71 +2439,44 @@
     <script>
         // Sample product data
         const products = [
-            {
-                id: 1,
-                name: "Achari Punch (Pickle-inspired tang with hing/kalonji) ",
-                price: 199,
-                originalPrice: 249,
-                image: "https://images.unsplash.com/photo-1582284540020-8acbe03f4924?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-                description: "Our original recipe with a perfect balance of sweet and tangy flavors. A timeless favorite for mango lovers.",
-                badge: "Bestseller"
-            },
-            {
-                id: 2,
-                name: "Mirchi Masti (Andhra-style fiery chili) ",
-                price: 219,
-                image: "https://images.unsplash.com/photo-1599003037886-f8b50bc290c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-                description: "A fiery twist on our classic recipe, featuring a blend of Indian spices that pack a punch with every bite.",
-                badge: "New"
-            },
-            {
-                id: 3,
-                name: "Chaataka (Chaat masala + black salt) ",
-                price: 229,
-                originalPrice: 259,
-                image: "https://images.unsplash.com/photo-1613919113640-25732ec5e61f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-                description: "The perfect blend of tanginess and masala spices, creating a mouth-watering flavor explosion."
-            },
-            {
-                id: 4,
-                name: " Himalayan Sour (Rock salt + lemon zest)",
-                price: 209,
-                image: "https://images.unsplash.com/photo-1566478989037-eec170784d0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-                description: "A delightful combination of sweetness and sea salt that creates a perfectly balanced snacking experience.",
-                badge: "Popular"
-            },
-            {
-                id: 5,
-                name: "Kokum-Kairi (Maharashtra-style kokum + raw mango fusion)",
-                price: 209,
-                image: "https://images.unsplash.com/photo-1566478989037-eec170784d0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-                description: "A delightful combination of sweetness and sea salt that creates a perfectly balanced snacking experience.",
-                badge: "Popular"
-            },
-            {
-                id: 6,
-                name: "Protein Punch (For fitness buffs: added quinoa/amaranth crunch)",
-                price: 209,
-                image: "https://images.unsplash.com/photo-1566478989037-eec170784d0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-                description: "A delightful combination of sweetness and sea salt that creates a perfectly balanced snacking experience.",
-                badge: "Popular"
-            },
-            {
-                id: 7,
-                name: "Gur-Kaccha (Jaggery-coated sweet & sour) ",
-                price: 209,
-                image: "https://images.unsplash.com/photo-1566478989037-eec170784d0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-                description: "A delightful combination of sweetness and sea salt that creates a perfectly balanced snacking experience.",
-                badge: "Popular"
-            },
-            {
-                id: 8,
-                name: "Sindhi Style (Dry mango powder + cumin kick)",
-                price: 209,
-                image: "https://images.unsplash.com/photo-1566478989037-eec170784d0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-                description: "A delightful combination of sweetness and sea salt that creates a perfectly balanced snacking experience.",
-                badge: "Popular"
-            }
+        {
+            id: 1,
+            name: "Achari Punch (Pickle-inspired tang with hing/kalonji) ",
+            price: 199,
+            originalPrice: 249,
+            image: "/AchariPunch.jpeg",
+            description:
+              "Our original recipe with a perfect balance of sweet and tangy flavors. A timeless favorite for mango lovers.",
+            badge: "Bestseller",
+          },
+          {
+            id: 2,
+            name: "Mirchi Masti (Andhra-style fiery chili) ",
+            price: 219,
+            image: "/MirchiMasti.jpeg",
+            description:
+              "A fiery twist on our classic recipe, featuring a blend of Indian spices that pack a punch with every bite.",
+            badge: "New",
+          },
+        
+          {
+            id: 3,
+            name: "Kokum-Kairi (Maharashtra-style kokum + raw mango fusion)",
+            price: 209,
+            image: "/KokumKair.jpeg",
+            description:
+              "A delightful combination of sweetness and sea salt that creates a perfectly balanced snacking experience.",
+            badge: "Popular",
+          },
+          {
+            id: 4,
+            name: "Protein Punch (For fitness buffs: added quinoa/amaranth crunch)",
+            price: 209,
+            image: "/ProteinPunch.jpeg",
+            description:
+              "A delightful combination of sweetness and sea salt that creates a perfectly balanced snacking experience.",
+            badge: "Popular",
+          },
         ];
                      let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
