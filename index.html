@@ -9,7 +9,7 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap">
     <style>
         :root {
-            --primary-color: #FF9F1C;
+            --primary-color: #edb723;
             --primary-light: #FFB347;
             --primary-dark: #E08500;
             --secondary-color: #2EC4B6;
@@ -1570,13 +1570,11 @@
         .product-gallery {
             padding: 6rem 2rem;
             background-color: var(--light-bg);
+            text-align: center;
         }
         
         .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1.5rem;
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
         }
         
@@ -1585,7 +1583,7 @@
             border-radius: var(--border-radius);
             overflow: hidden;
             box-shadow: var(--box-shadow);
-            height: 250px;
+            height: 400px;
             cursor: pointer;
         }
         
@@ -1597,7 +1595,7 @@
         }
         
         .gallery-item:hover img {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
         
         .gallery-overlay {
@@ -1606,7 +1604,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
             opacity: 0;
             transition: var(--transition);
             display: flex;
@@ -1629,16 +1627,18 @@
             transform: translateY(0);
         }
         
+        
         .gallery-title {
             font-weight: 600;
             margin-bottom: 0.5rem;
-            font-size: 1.1rem;
+            font-size: 1.4rem;
         }
         
         .gallery-desc {
-            font-size: 0.9rem;
-            opacity: 0.9;
+            font-size: 1rem;
+            opacity: 0.95;
         }
+        
         
         /* Toast Notification */
         .toast-container {
@@ -1980,71 +1980,23 @@
             <section class="product-gallery" id="gallery">
                 <div class="container">
                     <h2 class="section-title">Product Gallery</h2>
-            <p class="section-subtitle">Take a closer look at our delicious mango chips and the care we put into making them</p>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                        alt="Mango Harvest">
-                    <div class="gallery-overlay">
-                        <div class="gallery-caption">
-                            <h4 class="gallery-title">Premium Mango Selection</h4>
-                            <p class="gallery-desc">We handpick the finest mangoes for our chips</p>
-                        </div>
+                    <p class="section-subtitle">
+                        Take a closer look at our delicious mango chips and the care we put into making them
+                    </p>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="/productgallery.jpeg" alt="Mango Harvest">
+                            <div class="gallery-overlay">
+                                <!-- <div class="gallery-caption">
+                                                                                                                                    <h4 class="gallery-title">Premium Mango Selection</h4>
+                                                                                                                                    <p class="gallery-desc">We handpick the finest mangoes for our chips</p>
+                                </div> -->
+                                </div>
+                                </div>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                        alt="Spice Blending">
-                    <div class="gallery-overlay">
-                        <div class="gallery-caption">
-                            <h4 class="gallery-title">Authentic Spice Blends</h4>
-                            <p class="gallery-desc">Our secret spice mixes create unique flavors</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                        alt="Chip Making Process">
-                    <div class="gallery-overlay">
-                        <div class="gallery-caption">
-                            <h4 class="gallery-title">Traditional Process</h4>
-                            <p class="gallery-desc">Carefully crafted using time-honored techniques</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1514517604298-cf80e0fb7f1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                        alt="Packaging">
-                    <div class="gallery-overlay">
-                        <div class="gallery-caption">
-                            <h4 class="gallery-title">Eco-Friendly Packaging</h4>
-                            <p class="gallery-desc">Sustainable materials for a better planet</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1583258292688-d0213dc5a3a8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                        alt="Mango Orchard">
-                    <div class="gallery-overlay">
-                        <div class="gallery-caption">
-                            <h4 class="gallery-title">Our Mango Orchards</h4>
-                            <p class="gallery-desc">Where our journey begins</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1576107232684-1279f390859f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                        alt="Final Product">
-                    <div class="gallery-overlay">
-                        <div class="gallery-caption">
-                            <h4 class="gallery-title">Ready to Enjoy</h4>
-                            <p class="gallery-desc">The perfect snack for any occasion</p>
-                        </div>
-                    </div>
-                </div>
-                    </div>
-        </div>
-    </section>
+                </section>
+            
 
     <!-- Features section -->
     <section class="features" id="features">
@@ -2198,7 +2150,7 @@
                 </div>
             </div>
             <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1591189863430-ab87e120f312?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                <img src="/stiry.jpeg"
                     alt="Our Story">
             </div>
         </div>
